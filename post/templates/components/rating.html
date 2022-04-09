@@ -1,0 +1,25 @@
+{% load mathfilters %}
+{% with one=post.rate_one|mul:1 two=post.rate_two|mul:2 three=post.rate_three|mul:3 four=post.rate_four|mul:4 five=post.rate_five|mul:5 %}
+    {% with count=post.rate_one|add:post.rate_two|add:post.rate_three|add:post.rate_four|add:post.rate_five %}
+        {% with total=one|add:two|add:three|add:four|add:five %}
+            <div class="strip-rating">
+                <h2>
+                    {% if total != 0 and count != 0 %}
+                        {{ total|div:count|floatformat:1 }} <span class="fa fa-star checked"></span>
+                    {% else %}
+                        
+                    {% endif %}
+                </h2>
+                <small class="text-muted">
+                    {% if count == 0 %}
+                        nobody has rated yet
+                    {% elif count == 1 %}
+                        from {{ count }} rating
+                    {% else %}
+                        from {{ count }} ratings
+                    {% endif %}
+                </small>
+            </div>
+        {% endwith %}
+    {% endwith %}    
+{% endwith %}

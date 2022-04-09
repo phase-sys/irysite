@@ -1,0 +1,28 @@
+<div>
+    <h1 class="user-posts-title">Posts by {{ view.kwargs.username }} ({{ page_obj.paginator.count }})</h1>
+    {% for post in posts %}
+        <div class="bg-light border rounded-3 p-3 mb-2 post-container">
+
+            {% include 'components/rating.html' %}
+
+            <div class="strip-info-parent">
+                <a href="{% url 'detail_post' post.id %}">
+                    <h5>
+                        {{ post.title }}
+                    </h5>
+                </a>
+
+                <small class="text-muted">
+                    #{{ post.tag }}
+                </small>
+            </div>
+
+            <div class="strip-post-parent">                
+                <p class="strip-post-content">
+                    {{ post.content }}
+                </p>
+            </div>
+
+        </div>
+    {% endfor %}
+</div>

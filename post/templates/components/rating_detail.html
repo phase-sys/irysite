@@ -1,0 +1,152 @@
+{% load mathfilters %}
+{% with count_one=post.rate_one count_two=post.rate_two count_three=post.rate_three count_four=post.rate_four count_five=post.rate_five %}
+    {% with total=count_one|add:count_two|add:count_three|add:count_four|add:count_five %}
+        <div class="row">
+            {% if total != 0 %}
+                
+                {% if count_five != 0 %}
+                    {% with count_five|div:total|floatformat:2 as percent_five %}
+                        <div class="side">
+                            <div>5 star</div>
+                        </div>
+                        <div class="middle">
+                            <div class="bar-container">
+                                <div class="bar-5" style="width: {{ percent_five|mul:100 }}%;"></div>
+                            </div>
+                        </div>
+                        <div class="side right">
+                            <div>{{ count_five }}</div>
+                        </div>
+                    {% endwith %}
+                {% else %}
+                    <div class="side">
+                        <div>5 star</div>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-5" style="width: 0%;"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>0</div>
+                    </div>
+                {% endif %}
+
+                {% if count_four != 0 %}
+                    {% with count_four|div:total|floatformat:2 as percent_four %}
+                        <div class="side">
+                            <div>4 star</div>
+                        </div>
+                        <div class="middle">
+                            <div class="bar-container">
+                                <div class="bar-4" style="width: {{ percent_four|mul:100 }}%;"></div>
+                            </div>
+                        </div>
+                        <div class="side right">
+                            <div>{{ count_four }}</div>
+                        </div>
+                    {% endwith %}
+                {% else %}
+                    <div class="side">
+                        <div>4 star</div>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-4" style="width: 0%;"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>0</div>
+                    </div>
+                {% endif %}
+
+                {% if count_three != 0 %}
+                    {% with count_three|div:total|floatformat:2 as percent_three %}
+                        <div class="side">
+                            <div>3 star</div>
+                        </div>
+                        <div class="middle">
+                            <div class="bar-container">
+                                <div class="bar-3" style="width: {{ percent_three|mul:100 }}%;"></div>
+                            </div>
+                        </div>
+                        <div class="side right">
+                            <div>{{ count_three }}</div>
+                        </div>
+                    {% endwith %}
+                {% else %}
+                    <div class="side">
+                        <div>3 star</div>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-3" style="width: 0%;"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>0</div>
+                    </div>
+                {% endif %}
+
+                {% if count_two != 0 %}
+                    {% with count_two|div:total|floatformat:2 as percent_two %}
+                        <div class="side">
+                            <div>2 star</div>
+                        </div>
+                        <div class="middle">
+                            <div class="bar-container">
+                                <div class="bar-2" style="width: {{ percent_two|mul:100 }}%;"></div>
+                            </div>
+                        </div>
+                        <div class="side right">
+                            <div>{{ count_two }}</div>
+                        </div>
+                    {% endwith %}
+                {% else %}
+                    <div class="side">
+                        <div>2 star</div>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-2" style="width: 0%;"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>0</div>
+                    </div>
+                {% endif %}
+
+                {% if count_one != 0 %}
+                    {% with count_one|div:total|floatformat:2 as percent_one %}
+                        <div class="side">
+                            <div>1 star</div>
+                        </div>
+                        <div class="middle">
+                            <div class="bar-container">
+                                <div class="bar-1" style="width: {{ percent_one|mul:100 }}%;"></div>
+                            </div>
+                        </div>
+                        <div class="side right">
+                            <div>{{ count_one }}</div>
+                        </div>
+                    {% endwith %}
+                {% else %}
+                    <div class="side">
+                        <div>1 star</div>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-1" style="width: 0%;"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>0</div>
+                    </div>
+                {% endif %}
+
+            {% endif %}
+        </div>
+
+    {% endwith %}
+{% endwith %}
+

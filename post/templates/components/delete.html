@@ -1,0 +1,16 @@
+{% extends 'post/base.html' %}
+
+{% block content %}
+
+    <form class="delete-container" method="POST" action="">
+        {% csrf_token %}
+        <p>
+            Are you sure you want to delete <h4 class="delete-text">"{{ obj }}" ?</h4>
+        </p>
+        <div class="delete-controls mt-3">
+            <a class="alt-btn" href="{{ request.META.HTTP_REFERER }}">Go Back</a>
+            <input class="warn-btn" type="submit" value="Confirm">
+        </div>
+    </form>
+
+{% endblock content %}

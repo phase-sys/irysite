@@ -1,0 +1,19 @@
+{% extends 'post/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="post-form">
+        <form method="POST" action="">
+            {% csrf_token %}
+            <fieldset class="rating">
+                <input type="radio" id="star5" name="is_rated" value="5" required/><label for="star5" class="full" title="Awesome"></label>
+                <input type="radio" id="star4" name="is_rated" value="4" required/><label for="star4" class="full"></label>
+                <input type="radio" id="star3" name="is_rated" value="3" required/><label for="star3" class="full"></label>
+                <input type="radio" id="star2" name="is_rated" value="2" required/><label for="star2" class="full"></label>
+                <input type="radio" id="star1" name="is_rated" value="1" required/><label for="star1" class="full"></label>
+            </fieldset>
+            {{ form|crispy }}
+            <input class="go-btn btn mt-2" type="submit" value="Submit"/>
+        </form>
+    </div>
+{% endblock content %}

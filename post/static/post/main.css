@@ -1,0 +1,261 @@
+:root{
+    --yell: #FFBD4A;
+    --blk: #333;
+    --white: #FBFBFB;
+    --gray: #DDD;
+    --links: #0060B6;
+    --red: #F24A72;
+
+    --green: #04AA6D;
+    --blue: #2196F3;
+    --aqua: #00bcd4;
+}
+
+
+
+a{
+    color: var(--yell);
+    text-decoration: none;
+}
+
+.navbar-brand{
+    font-weight: 600;
+    color: var(--blk);
+}
+
+.post-container{
+    display: grid;
+    grid-template-columns: 2fr 2fr 8fr;
+    align-items: center;
+    gap: 10px;
+}
+
+p, h5, h6, h2{
+    margin: 0;
+}
+
+.accept-user{
+    margin: 0 10px;
+    list-style: none;
+}
+
+.accept-user > a{
+    color: var(--blk);
+}
+
+.accept-user > a:hover{
+    color: var(--yell);
+}
+
+.pic-posts{
+    height: 40px;
+    width: 40px;
+}
+
+.strip-rating{
+    text-align: center;
+}
+
+.user-info{
+    display: flex;
+}
+
+.user-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.go-btn{
+    display: block;
+    width: 100%;
+    text-align: center;
+    border: 1px solid var(--yell);
+}
+
+.go-btn:hover{
+    background-color: var(--yell);
+    color: var(--white);
+}
+
+.warn-btn{
+    border: 1px solid var(--red);
+    background-color: var(--white);
+    color: var(--red);
+
+}
+
+.warn-btn:hover{
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.control-btn{
+    color: var(--red)
+}
+
+.alt-btn{
+    color: var(--links);
+}
+
+.delete-container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -15%;
+    margin-top: -10%;
+}
+
+.delete-controls{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.delete-text{
+    overflow: hidden;
+}
+
+.comment-input{
+    width: 100%;
+}
+
+.strip-post-parent, .strip-info-parent{
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    text-overflow: ellipsis;
+}
+
+.comment-container{
+    padding: 0;
+}
+
+.comment-inner{
+    padding: 10px;
+}
+
+.i-user-container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -40%;
+    margin-top: -10%;
+    width: 40%;
+}
+
+.login-container{
+    width: 100%;
+}
+
+.register-container{
+    margin-top: -20%;
+}
+
+
+.logout-container, .p-reset-container{
+    margin-top: 10%;
+}
+
+.profile-border, .detail-post, .home-container, .post-form{
+    margin: 0 15%;
+}
+
+.post-detailed > h1, .post-content > p{
+    overflow-wrap: break-word;
+}
+
+.strip-info{
+    overflow: hidden;
+}
+
+.rated{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/*styling star rating*/
+
+.checked{
+    color: var(--yell);
+}
+
+.rating{
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+.rating > input{
+	display: none;
+}
+
+.rating > label:before{
+	content: '\f005';
+	font-family: FontAwesome;
+	margin: 5px;
+	font-size: 1.5rem;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.rating > label{
+	color: #ddd;
+	float: right;
+	cursor: pointer;
+}
+
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover, 
+.rating:not(:checked) > label:hover ~ label{
+	color: var(--yell);
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+.rating > input:checked ~ label:hover ~ label{
+	color: var(--yell);
+}
+
+/* Three column layout */
+.side {
+    float: left;
+    width: 15%;
+    margin-top:10px;
+  }
+  
+.middle {
+    margin-top:10px;
+    float: left;
+    width: 70%;
+}
+
+/* Place text to the right */
+.right {
+text-align: right;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* The bar container */
+.bar-container {
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    color: white;
+}
+
+/* Individual bars */
+.bar-5 {height: 18px; background-color: var(--yell);}
+.bar-4 {height: 18px; background-color: var(--green);}
+.bar-3 {height: 18px; background-color: var(--blue);}
+.bar-2 {height: 18px; background-color: var(--aqua);}
+.bar-1 {height: 18px; background-color: var(--red);}
