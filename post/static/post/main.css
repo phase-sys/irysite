@@ -28,10 +28,6 @@ a{
     gap: 10px;
 }
 
-.tag, .title, .author, .content, .confirmation, .delete-text{
-    word-break: break-all;
-}
-
 p, h5, h6, h2{
     margin: 0;
 }
