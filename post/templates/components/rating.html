@@ -5,18 +5,16 @@
             <div class="strip-rating">
                 <h2>
                     {% if total != 0 and count != 0 %}
-                        {{ total|div:count|floatformat:1 }} <span class="fa fa-star checked"></span>
-                    {% else %}
-                        
+                        {{ total|div:count|floatformat:1 }} <span class="fa fa-star checked"></span>                        
                     {% endif %}
                 </h2>
                 <small class="text-muted">
                     {% if count == 0 %}
                         nobody has rated yet
                     {% elif count == 1 %}
-                        from {{ count }} rating
+                        {{ count }} rating
                     {% else %}
-                        from {{ count }} ratings
+                        {{ count }} ratings
                     {% endif %}
                 </small>
             </div>

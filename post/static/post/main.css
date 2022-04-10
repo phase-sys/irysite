@@ -13,6 +13,7 @@
 
 
 
+
 a{
     color: var(--yell);
     text-decoration: none;
@@ -25,31 +26,17 @@ a{
 
 .post-container{
     display: grid;
-    grid-template-columns: 2fr 2fr 8fr;
+    grid-template-columns: 1fr 3fr;
     align-items: center;
     gap: 10px;
 }
 
+.tag, .title, .author, .content, .confirmation, .delete-text{
+    word-break: break-all;
+}
+
 p, h5, h6, h2{
     margin: 0;
-}
-
-.accept-user{
-    margin: 0 10px;
-    list-style: none;
-}
-
-.accept-user > a{
-    color: var(--blk);
-}
-
-.accept-user > a:hover{
-    color: var(--yell);
-}
-
-.pic-posts{
-    height: 40px;
-    width: 40px;
 }
 
 .strip-rating{
@@ -60,12 +47,98 @@ p, h5, h6, h2{
     display: flex;
 }
 
+/* posts_display html */
+
+.user-posts-title{
+    text-align: center;
+}
+
+/* containers */
+.detail-container, .post-form, .profile-container{
+    margin: 0 5%;
+}
+
+.logout-container{
+    position: fixed;
+    top: 50%;
+    left: 25%;
+}
+
+.login-container{
+    position: fixed;
+    top: 35%;
+    left: 25%;
+}
+
+.register-container{
+    position: fixed;
+    top: 5%;
+    left: 25%;
+    margin-right: 20px;
+}
+
+.delete-container{
+    position: fixed;
+    top: 20%;
+    left: 5%;
+    margin-right: 20px;
+}
+
+/*greater than 500px*/
+@media only screen and (min-width: 500px) {
+    .register-container{
+        position: fixed;
+        top: 20%;
+        left: 25%;
+        margin-right: 20px;
+    }
+
+    .detail-container, .post-form, .profile-container, .post-container{
+        margin: 0 20%;
+    }
+}
+
+.p-reset-container{
+    position: fixed;
+    top: 45%;
+    left: 25%;
+}
+
+.alert-container{
+    width: 75%;
+}
+
+/* profile */
 .user-container{
     display: flex;
     flex-direction: column;
+    padding: 20px 10px;
     align-items: center;
+}
+
+.user-profile-pic{
+    height: 200px;
+    width: 200px;
+}
+
+/* details */
+
+textarea{
+    width: 100%;
+    height: 100px;
+}
+
+.comment-inner{
     padding: 10px;
 }
+
+.rated{
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+/* btns */
 
 .go-btn{
     display: block;
@@ -99,83 +172,6 @@ p, h5, h6, h2{
     color: var(--links);
 }
 
-.delete-container{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -15%;
-    margin-top: -10%;
-}
-
-.delete-controls{
-    display: flex;
-    align-items: center;
-    column-gap: 10px;
-}
-
-.delete-text{
-    overflow: hidden;
-}
-
-.comment-input{
-    width: 100%;
-}
-
-.strip-post-parent, .strip-info-parent{
-    overflow: hidden;
-    white-space: nowrap;
-    width: 100%;
-    text-overflow: ellipsis;
-}
-
-.comment-container{
-    padding: 0;
-}
-
-.comment-inner{
-    padding: 10px;
-}
-
-.i-user-container{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -40%;
-    margin-top: -10%;
-    width: 40%;
-}
-
-.login-container{
-    width: 100%;
-}
-
-.register-container{
-    margin-top: -20%;
-}
-
-
-.logout-container, .p-reset-container{
-    margin-top: 10%;
-}
-
-.profile-border, .detail-post, .home-container, .post-form{
-    margin: 0 15%;
-}
-
-.post-detailed > h1, .post-content > p{
-    overflow-wrap: break-word;
-}
-
-.strip-info{
-    overflow: hidden;
-}
-
-.rated{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
 /*styling star rating*/
 
 .checked{
@@ -196,7 +192,6 @@ p, h5, h6, h2{
 	content: '\f005';
 	font-family: FontAwesome;
 	margin: 5px;
-	font-size: 1.5rem;
 	display: inline-block;
 	cursor: pointer;
 }
@@ -220,29 +215,30 @@ p, h5, h6, h2{
 	color: var(--yell);
 }
 
-/* Three column layout */
-.side {
-    float: left;
-    width: 15%;
-    margin-top:10px;
-  }
-  
-.middle {
-    margin-top:10px;
-    float: left;
-    width: 70%;
+/* Graph */
+
+.row{
+    margin: 10px 0;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    align-items: center;
+    justify-items: center;
+    row-gap: 5px;
 }
 
-/* Place text to the right */
-.right {
-text-align: right;
+.row > div.side{
+    text-align: center;
 }
 
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
+div.right{
+    display: flex;
+    padding: 0;
+}
+
+div.left{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0;
 }
 
 /* The bar container */

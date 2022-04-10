@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="home-container">
-    <div class="container-fluid pb-3">
+    <div class="pb-3">
         <div class="d-grid gap-3">
             <div>
                 {% for post in posts %}
@@ -10,10 +10,10 @@
 
                         {% include 'components/rating.html' %}
 
-                        <div class="strip-info">
+                        <div class="strip-post">
                             <div class="user-info">
                                 <a href="{% url 'user_posts' post.author.username %}">
-                                    <h6>
+                                    <h6 class="author">
                                         {{ post.author }}
                                     </h6>
                                 </a>
@@ -21,16 +21,13 @@
                             <small>
                                 {{ post.created }}
                             </small>
-                        </div>
-
-                        <div class="strip-post">
                             <a href="{% url 'detail_post' post.id %}">
-                                <h5>
+                                <h5 class="title">
                                     {{ post.title }}
                                 </h5>
                             </a>
-                            <small class="text-muted">
-                                #{{ post.tag }}
+                            <small class="tag text-muted">
+                                {{ post.tag }}
                             </small>
                         </div>
 

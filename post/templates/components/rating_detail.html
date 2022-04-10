@@ -6,8 +6,8 @@
                 
                 {% if count_five != 0 %}
                     {% with count_five|div:total|floatformat:2 as percent_five %}
-                        <div class="side">
-                            <div>5 star</div>
+                        <div class="side left">
+                            <small>5 star</small>
                         </div>
                         <div class="middle">
                             <div class="bar-container">
@@ -15,12 +15,12 @@
                             </div>
                         </div>
                         <div class="side right">
-                            <div>{{ count_five }}</div>
+                            <small>{{ count_five }}</small>
                         </div>
                     {% endwith %}
                 {% else %}
-                    <div class="side">
-                        <div>5 star</div>
+                    <div class="side left">
+                        <small>5 star</small>
                     </div>
                     <div class="middle">
                         <div class="bar-container">
@@ -28,14 +28,14 @@
                         </div>
                     </div>
                     <div class="side right">
-                        <div>0</div>
+                        <small>0</small>
                     </div>
                 {% endif %}
 
                 {% if count_four != 0 %}
                     {% with count_four|div:total|floatformat:2 as percent_four %}
-                        <div class="side">
-                            <div>4 star</div>
+                        <div class="side left">
+                            <small>4 star</small>
                         </div>
                         <div class="middle">
                             <div class="bar-container">
@@ -43,12 +43,12 @@
                             </div>
                         </div>
                         <div class="side right">
-                            <div>{{ count_four }}</div>
+                            <small>{{ count_four }}</small>
                         </div>
                     {% endwith %}
                 {% else %}
-                    <div class="side">
-                        <div>4 star</div>
+                    <div class="side left">
+                        <small>4 star</small>
                     </div>
                     <div class="middle">
                         <div class="bar-container">
@@ -56,14 +56,14 @@
                         </div>
                     </div>
                     <div class="side right">
-                        <div>0</div>
+                        <small>0</small>
                     </div>
                 {% endif %}
 
                 {% if count_three != 0 %}
                     {% with count_three|div:total|floatformat:2 as percent_three %}
-                        <div class="side">
-                            <div>3 star</div>
+                        <div class="side left">
+                            <small>3 star</small>
                         </div>
                         <div class="middle">
                             <div class="bar-container">
@@ -71,12 +71,12 @@
                             </div>
                         </div>
                         <div class="side right">
-                            <div>{{ count_three }}</div>
+                            <small>{{ count_three }}</small>
                         </div>
                     {% endwith %}
                 {% else %}
-                    <div class="side">
-                        <div>3 star</div>
+                    <div class="side left">
+                        <small>3 star</small>
                     </div>
                     <div class="middle">
                         <div class="bar-container">
@@ -84,14 +84,14 @@
                         </div>
                     </div>
                     <div class="side right">
-                        <div>0</div>
+                        <small>0</small>
                     </div>
                 {% endif %}
 
                 {% if count_two != 0 %}
                     {% with count_two|div:total|floatformat:2 as percent_two %}
-                        <div class="side">
-                            <div>2 star</div>
+                        <div class="side left">
+                            <small>2 star</small>
                         </div>
                         <div class="middle">
                             <div class="bar-container">
@@ -99,12 +99,12 @@
                             </div>
                         </div>
                         <div class="side right">
-                            <div>{{ count_two }}</div>
+                            <small>{{ count_two }}</small>
                         </div>
                     {% endwith %}
                 {% else %}
-                    <div class="side">
-                        <div>2 star</div>
+                    <div class="side left">
+                        <small>2 star</small>
                     </div>
                     <div class="middle">
                         <div class="bar-container">
@@ -112,14 +112,14 @@
                         </div>
                     </div>
                     <div class="side right">
-                        <div>0</div>
+                        <small>0</small>
                     </div>
                 {% endif %}
 
                 {% if count_one != 0 %}
                     {% with count_one|div:total|floatformat:2 as percent_one %}
-                        <div class="side">
-                            <div>1 star</div>
+                        <div class="side left">
+                            <small>1 star</small>
                         </div>
                         <div class="middle">
                             <div class="bar-container">
@@ -127,12 +127,12 @@
                             </div>
                         </div>
                         <div class="side right">
-                            <div>{{ count_one }}</div>
+                            <small>{{ count_one }}</small>
                         </div>
                     {% endwith %}
                 {% else %}
-                    <div class="side">
-                        <div>1 star</div>
+                    <div class="side left">
+                        <small>1 star</small>
                     </div>
                     <div class="middle">
                         <div class="bar-container">
@@ -140,7 +140,7 @@
                         </div>
                     </div>
                     <div class="side right">
-                        <div>0</div>
+                        <small>0</small>
                     </div>
                 {% endif %}
 

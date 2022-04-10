@@ -2,7 +2,7 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-    <div class="container-fluid pb-3">
+    <div class="profile-container pb-3">
         <div class="d-grid gap-3">
             <div class="bg-light border rounded-3 profile-border">
                 <div class="user-container">
@@ -14,7 +14,6 @@
                         <fieldset class="form-group">
                             <legend>Profile Info</legend>
                             {{ u_form|crispy }}
-                            <hr>
                             {{ p_form|crispy }}
                         </fieldset>
                         <div class="form-group">
