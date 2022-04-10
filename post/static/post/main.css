@@ -11,9 +11,6 @@
     --aqua: #00bcd4;
 }
 
-
-
-
 a{
     color: var(--yell);
     text-decoration: none;
@@ -59,7 +56,6 @@ p, h5, h6, h2{
 
 .commenter-container{
     display:flex;
-    
     column-gap: 10px;
     align-items: center;
 }
@@ -153,7 +149,6 @@ p, h5, h6, h2{
 
 .user-profile-pic{
     height: 200px;
-    width: 200px;
 }
 
 /* details */
@@ -246,9 +241,7 @@ textarea{
 .rating > input:checked + label:hover,
 .rating > input:checked ~ label:hover,
 .rating > label:hover ~ input:checked ~ label,
-.rating > input:checked ~ label:hover ~ label{
-	color: var(--yell);
-}
+.rating > input:checked ~ label:hover ~ label{color: var(--yell);}
 
 /* Graph */
 
