@@ -14,7 +14,6 @@ class PostListView(ListView):
     model = Post
     template_name = 'post/posts_home.html'
     context_object_name = 'posts'
-    extra_context = {'title':'Home'}
     ordering = ['-created']
 
     def get_queryset(self):
@@ -155,27 +154,6 @@ def update_comment(request, pk):
 
     context = {'form':form}
     return render(request, 'components/edit_rating.html', context)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 def delete_post(request, pk):
     post = Post.objects.get(id=pk)

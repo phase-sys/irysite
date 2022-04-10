@@ -66,7 +66,8 @@
                 <div class="pb-3 comment-container">
                     <div class="d-grid gap-3">
                         <div class="bg-light border rounded-3 comment-inner">
-                            <a href="{% url 'user_posts' comment.rater.username %}">
+                            <a class="commenter-container" href="{% url 'user_posts' comment.rater.username %}">
+                                <img width="32" height="32" class="rounded-circle" src="{{ comment.rater.profile.image.url }}">
                                 <h6>
                                     {{ comment.rater }}
                                 </h6>

@@ -49,11 +49,21 @@ p, h5, h6, h2{
 
 /* posts_display html */
 
-.user-posts-title{
-    text-align: center;
+.user-posts-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* containers */
+
+.commenter-container{
+    display:flex;
+    
+    column-gap: 10px;
+    align-items: center;
+}
+
 .detail-container, .post-form, .profile-container{
     margin: 0 5%;
 }
