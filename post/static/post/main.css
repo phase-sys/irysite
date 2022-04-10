@@ -11,6 +11,12 @@
     --aqua: #00bcd4;
 }
 
+header{
+    position: sticky;
+    top: 0;
+    background-color: var(--white);
+}
+
 a{
     color: var(--yell);
     text-decoration: none;
