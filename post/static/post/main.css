@@ -61,20 +61,26 @@ p, h5, h6, h2{
 .logout-container{
     position: fixed;
     top: 50%;
-    left: 25%;
+    left: 10%;
 }
 
 .login-container{
     position: fixed;
     top: 35%;
-    left: 25%;
+    left: 10%;
 }
 
 .register-container{
     position: fixed;
     top: 5%;
-    left: 25%;
+    left: 10%;
     margin-right: 20px;
+}
+
+.p-reset-container{
+    position: fixed;
+    top: 45%;
+    left: 10%;
 }
 
 .delete-container{
@@ -96,12 +102,31 @@ p, h5, h6, h2{
     .detail-container, .post-form, .profile-container, .post-container{
         margin: 0 20%;
     }
-}
 
-.p-reset-container{
-    position: fixed;
-    top: 45%;
-    left: 25%;
+    .logout-container{
+        position: fixed;
+        top: 50%;
+        left: 25%;
+    }
+    
+    .login-container{
+        position: fixed;
+        top: 35%;
+        left: 25%;
+    }
+    
+    .register-container{
+        position: fixed;
+        top: 20%;
+        left: 25%;
+        margin-right: 20px;
+    }
+    
+    .p-reset-container{
+        position: fixed;
+        top: 45%;
+        left: 25%;
+    }
 }
 
 .alert-container{
